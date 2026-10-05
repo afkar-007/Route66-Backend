@@ -23,7 +23,7 @@ const server = http.createServer(app)
 
 const io= new Server(server,{
     cors:{
-        origin: "https://route-66-indol.vercel.app/",
+        origin: "https://route-66-indol.vercel.app",
         methods: ["GET", "POST"]
     }
 
