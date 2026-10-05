@@ -18,12 +18,16 @@ ConnectDb()
 const app = express()
 
 const server = http.createServer(app)
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://route-66-indol.vercel.app"
+];
 
 
 
 const io= new Server(server,{
     cors:{
-        origin: "https://route-66-indol.vercel.app",
+        origin: allowedOrigins,
         methods: ["GET", "POST"]
     }
 
@@ -114,7 +118,7 @@ app.use(express.json())
 
 app.use(
   cors({
-    origin: "https://route-66-indol.vercel.app",
+    origin: allowedOrigins,
 
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
