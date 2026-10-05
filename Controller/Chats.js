@@ -14,7 +14,7 @@ const getMyChats = async (req, res) => {
     const users = new Map();
 
     messages.forEach((chat) => {
-      console.log("CHAT:", chat);
+      
 
 
 
